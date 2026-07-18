@@ -223,6 +223,26 @@ nav.scrolled{background:rgba(254,254,254,0.97);border-bottom:1px solid rgba(0,0,
 .personaje-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--dark);margin-top:1rem;}
 .personaje-desc-line{width:100%;height:1px;background:rgba(0,0,0,0.1);margin-top:0.7rem;}
 
+/* PERFILES ACTORALES */
+.perfil-card-wrap{display:flex;flex-direction:column;align-items:center;margin-top:2.5rem;}
+.perfil-card{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  width:100%;max-width:420px;padding:2.8rem 2rem;
+  background:linear-gradient(135deg,var(--rosa),var(--lav));
+  border-radius:18px;text-decoration:none;
+  box-shadow:0 14px 40px rgba(255,165,169,0.3);
+  transition:transform 0.25s,box-shadow 0.25s;
+}
+.perfil-card:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(255,165,169,0.4);}
+.perfil-icon{
+  width:52px;height:52px;border-radius:16px;
+  background:rgba(255,255,255,0.9);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--rosa);
+}
+.perfil-card-text{color:#fff;font-size:1rem;font-weight:500;text-align:center;}
+.perfil-caption{margin-top:1rem;font-size:12px;color:var(--gray);text-align:center;}
+
 /* NUMEROS */
 .nums-bg{background:linear-gradient(135deg,rgba(197,207,236,0.15),rgba(155,235,215,0.12));border-radius:36px;padding:4.5rem 8%;margin:0 3% 5rem;}
 @media(max-width:768px){.nums-bg{border-radius:20px;padding:3rem 6%;margin:0 0 3.5rem;}}
@@ -393,6 +413,22 @@ footer a{color:var(--rosa);text-decoration:none;}
       <h3 class="personaje-title">Homicidio</h3>
       <div class="personaje-desc-line"></div>
     </div>
+  </div>
+</div>
+
+<!-- PERFILES ACTORALES -->
+<div class="sec fi" id="perfiles">
+  <p class="sec-label">Perfiles actorales</p>
+  <div class="line"></div>
+  <h2 class="sec-title">Mis perfiles actorales.</h2>
+  <div class="perfil-card-wrap">
+    <a href="https://www.instagram.com/p/Da9ARitEfcI/?igsh=ZHhha2VicXpmaWRk" target="_blank" rel="noopener" class="perfil-card">
+      <div class="perfil-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <div class="perfil-card-text">Ver perfil actoral en Instagram</div>
+    </a>
+    <p class="perfil-caption">Perfil actoral · @_lu.actriz0</p>
   </div>
 </div>
 
