@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://open.spotify.com;">
 <title>Lu Actriz · Actriz colombiana · Manizales</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -249,8 +249,13 @@ nav.scrolled{background:rgba(254,254,254,0.97);border-bottom:1px solid rgba(0,0,
 .manager-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--dark);margin-bottom:1.2rem;}
 .manager-linkedin{display:inline-flex;align-items:center;gap:8px;background:#0A66C2;color:#fff;padding:9px 16px;border-radius:24px;font-size:13px;font-weight:500;text-decoration:none;margin-bottom:1rem;transition:opacity 0.2s;}
 .manager-linkedin:hover{opacity:0.85;}
-.manager-phone{display:flex;align-items:center;gap:8px;font-size:0.95rem;color:var(--gray);text-decoration:none;}
-.manager-phone svg{color:var(--rosa);flex-shrink:0;}
+.manager-whatsapp{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:9px 16px;border-radius:24px;font-size:13px;font-weight:500;text-decoration:none;transition:opacity 0.2s;}
+.manager-whatsapp:hover{opacity:0.85;}
+
+/* FRASE + CANCION */
+.dream-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--dark);text-align:center;max-width:640px;margin:0 auto 2.2rem;line-height:1.6;}
+.spotify-wrap{max-width:480px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,0.12);}
+.spotify-wrap iframe{width:100%;height:152px;border:none;display:block;}
 
 /* NUMEROS */
 .nums-bg{background:linear-gradient(135deg,rgba(197,207,236,0.15),rgba(155,235,215,0.12));border-radius:36px;padding:4.5rem 8%;margin:0 3% 5rem;}
@@ -492,19 +497,33 @@ footer a{color:var(--rosa);text-decoration:none;}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
         Ver perfil de LinkedIn
       </a>
-      <a href="tel:+573207215488" class="manager-phone">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        +57 320 721 5488
+      <a href="https://wa.me/573207215488" target="_blank" rel="noopener" class="manager-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10.1 9 9.5 7.6 9.3 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.3-.1-.1-.3-.2-.5-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.1L2 22l5-1.5c1.4.9 3.2 1.4 5 1.4 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+        Escríbeme por WhatsApp
       </a>
     </div>
     <div class="manager-card">
       <p class="manager-role">Manager de producción</p>
       <h3 class="manager-name">Cúpula Films · Simón Marín Aponte</h3>
-      <a href="tel:+573205004578" class="manager-phone">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        +57 320 500 4578
+      <a href="https://wa.me/573205004578" target="_blank" rel="noopener" class="manager-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10.1 9 9.5 7.6 9.3 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.3-.1-.1-.3-.2-.5-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.1L2 22l5-1.5c1.4.9 3.2 1.4 5 1.4 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+        Escríbeme por WhatsApp
       </a>
     </div>
+  </div>
+</div>
+
+<!-- FRASE + CANCION -->
+<div class="sec fi">
+  <p class="dream-quote">Nunca se te olvide, ¡Somos el tamaño de nuestros sueños!</p>
+  <div class="spotify-wrap">
+    <iframe
+      src="https://open.spotify.com/embed/track/6GyFP1nfCDB8lbD2bG0Hq9?utm_source=generator"
+      title="Canción"
+      width="100%" height="152"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
   </div>
 </div>
 
